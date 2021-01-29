@@ -40,7 +40,7 @@ adb connect 127.0.0.1
 
 If this results in a "Connection refused" error, you might need to set a port forwarding rule. In VirtualBox, go to "Network" in your VM's settings. Click on "Advanced", followed by "Port Forwarding". Here, click on the green "+" icon (top-right). This adds a port forwarding rule. Now change the values of both "Host Port" and "Guest Port" to 5555 (defaults are 0):
 
-![](.img/vbox-ptforward.png)
+![](./img/vbox-ptforward.png)
 
 Then try to connect again.
 
