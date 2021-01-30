@@ -114,6 +114,14 @@ And:
 > IPA apps and which will require positive engagement
 > with Apple to reach a satisfactory conclusion.
 
+[iOS emulators entry on Emulation General Wiki](https://emulation.gametechwiki.com/index.php/IOS_emulators)
+
+> Unlike their direct competitor, Android-based smartphones, they have currently no usable emulators, as the official iOS SDK (macOS-only) only allows for running your own projects, i.e. they run code generated for an x86 target rather than ARM code as used by iOS. 
+
+Also, see the "History of Failed iOS Emulation Attempts".
+
+[iOS on QEMU](https://github.com/alephsecurity/xnu-qemu-arm64) - interesting, but no support for devices (screen!) at this stage.
+
 ## Virtual Box setup
 
 Android-86:
