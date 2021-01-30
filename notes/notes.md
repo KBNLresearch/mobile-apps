@@ -73,7 +73,7 @@ Page 3:
 
 - [Cuttlefish](]https://source.android.com/setup/create/cuttlefish) - "a configurable virtual Android device that can run both remotely (using third-party cloud offerings such as Google Cloud Engine) and locally (on Linux x86 machines)".
 
-See also [Android emulators entry on Emulation General Wiki](https://emulation.gametechwiki.com/index.php/Android_emulators)
+See also [Android emulators entry on Emulation General Wiki](https://emulation.gametechwiki.com/index.php/Android_emulators); LOTS of detail about emulator-specific issues.
 
 ## Location of packages on Android
 
