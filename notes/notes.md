@@ -63,9 +63,11 @@ Page 3:
 
 ## Android
 
-- Android Emulator (part of [Android Studio](https://developer.android.com/studio/intro)), [Android x86](https://www.android-x86.org/) (e.g. VM in VirtualBox).
+Good overview in [Android emulators entry on Emulation General Wiki](https://emulation.gametechwiki.com/index.php/Android_emulators); LOTS of detail about emulator-specific issues.
 
-- [Anbox](https://anbox.io/) (Android in a Box) - "Run Android applications on any GNU/Linux operating system".
+- [Anbox](https://anbox.io/) (Android in a Box) - "Run Android applications on any GNU/Linux operating system". Recommended by Emulation General Wiki, so needs checking out!
+
+- Android Emulator (part of [Android Studio](https://developer.android.com/studio/intro)), [Android x86](https://www.android-x86.org/) (e.g. VM in VirtualBox).
 
 - Virtualbox - used to work back in 2015, but latest Android-x86 version ([9, rc 2](https://www.android-x86.org/releases/releasenote-9-0-r2.html)) results in various issues on VirtualBox. These are documented [here](https://forums.virtualbox.org/viewtopic.php?f=4&t=96610). So for the moment not a viable option.
 
@@ -73,7 +75,7 @@ Page 3:
 
 - [Cuttlefish](]https://source.android.com/setup/create/cuttlefish) - "a configurable virtual Android device that can run both remotely (using third-party cloud offerings such as Google Cloud Engine) and locally (on Linux x86 machines)".
 
-See also [Android emulators entry on Emulation General Wiki](https://emulation.gametechwiki.com/index.php/Android_emulators); LOTS of detail about emulator-specific issues.
+
 
 ## Location of packages on Android
 
