@@ -144,42 +144,53 @@ qemu-system-x86_64 \
 -serial mon:stdio \
 -boot menu=on \
 -net nic \
--net user,hostfwd=tcp::5555-:22 \
--hda androidx86_hda.img
+-net user,hostfwd=tcp::4444-:5555 \
+-hda androidx86_9_hda.img
 ```
 
 Also works.
 
-Now let's create a mount point on the host machine for the file system of the emulated device. First install libguestfs-tools:
+## Adb connection
+
+As per [here](https://www.android-x86.org/documentation/debug.html):
 
 ```
-sudo apt install libguestfs-tools
+adb connect 127.0.0.1:4444
 ```
 
-BUT gives warnings:
+## Install apps
+
+Install Arize app:
 
 ```
-W: Possible missing firmware /lib/firmware/rtl_nic/rtl8125a-3.fw for module r8169
-W: Possible missing firmware /lib/firmware/rtl_nic/rtl8168fp-3.fw for module r8169
-W: Possible missing firmware /lib/firmware/i915/tgl_dmc_ver2_04.bin for module i915
-W: Possible missing firmware /lib/firmware/i915/skl_guc_33.0.0.bin for module i915
-W: Possible missing firmware /lib/firmware/i915/bxt_guc_33.0.0.bin for module i915
-W: Possible missing firmware /lib/firmware/i915/kbl_guc_33.0.0.bin for module i915
-W: Possible missing firmware /lib/firmware/i915/glk_guc_33.0.0.bin for module i915
-W: Possible missing firmware /lib/firmware/i915/kbl_guc_33.0.0.bin for module i915
-W: Possible missing firmware /lib/firmware/i915/icl_guc_33.0.0.bin for module i915
+adb -s 127.0.0.1:4444 install com.Triplee.TripleeSocial.apk
 ```
 
-[Guestmount tool](https://libguestfs.org/guestmount.1.html) - "Mount a guest filesystem on the host using FUSE and libguestfs". Note the warning:
-
-> Using guestmount in write mode on live virtual machines, or concurrently with other disk editing tools, can be dangerous, potentially causing disk corruption. The virtual machine must be shut down before you use this command, and disk images must not be edited concurrently.
-
-More info [here](https://www.cloudsavvyit.com/7517/how-to-mount-a-qemu-virtual-disk-image/).
-
-Then:
+Result:
 
 ```
-guestmount -a androidx86_hda.img -m /dev/sda1 img/
+Performing Streamed Install
+Success
 ```
 
-Also gives error.
+Launch app: crashes immediately.
+
+
+Immer App:
+
+```
+adb -s 127.0.0.1:4444 install app.immer.immer.apk
+```
+
+Result:
+
+```
+Performing Streamed Install
+Success
+```
+
+Run the app - works, but on startup shows as:
+
+![](./img/qemu_android_immer.png)
+
+Possib;e to click to user profile but display garbled. 
