@@ -28,7 +28,7 @@ List of devices attached
 emulator-5554          device product:sdk_gphone_x86_arm model:AOSP_on_IA_Emulator device:generic_x86_arm transport_id:8
 ```
 
-Note: 2 devices (don't really understand logic behind this?). Anyway, [use `adb` with `-s` switch and device id to send commands to a specific device](https://developer.android.com/studio/command-line/adb#directingcommands):
+<strike>Note: 2 devices (don't really understand logic behind this?).</strike> Two devices because emulator automatically sets up a connection, so no need to do a manual adb connect. Anyway, [use `adb` with `-s` switch and device id to send commands to a specific device](https://developer.android.com/studio/command-line/adb#directingcommands):
 
 ```
 adb -s 127.0.0.1:5555 shell pm list packages
@@ -56,6 +56,35 @@ Success
 ```
 
 Launch app: works! But app needs camera, so let's test with webcam. See [How to use webcam in emulator](https://stackoverflow.com/a/30792615): shut down device, open AVD manager, go to Advanced Settings and set Front and Back Camera fields to Webcam0. However app freezes after some time, and VM becomes unresponsive (adb connect also fails). On re-boot it reboots in this error state. Fix: in AVD manager, change Boot option to "Cold boot".
+
+Immer app:
+
+```
+adb -s 127.0.0.1:5555 install app.immer.immer.apk
+```
+
+Result:
+
+```
+Performing Streamed Install
+adb: failed to install app.immer.immer.apk: Failure [INSTALL_FAILED_INSUFFICIENT_STORAGE]
+```
+
+Why does this happen? Default "Internal Storage" is only 800 MB, so change to 4GB. After this:
+
+```
+Performing Streamed Install
+Success
+```
+
+Launch: works! Some screenshots:
+
+![](./img/androidstudio_immer.png)
+
+![](./img/androidstudio_immer_2.png)
+
+![](./img/androidstudio_immer_3.png)
+
 
 ## Using Emulator from command line
 
