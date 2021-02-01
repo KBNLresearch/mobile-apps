@@ -80,6 +80,28 @@ BUT app immediately crashes on startup. Apparently apps crashing under Android x
 
 Perhaps the app really needs a native ARM architecture? 
 
+Immer app:
+
+```
+adb install app.immer.immer.apk
+```
+
+Result:
+
+```
+Performing Streamed Install
+Success
+```
+
+Launch: works! Some screenshots:
+
+![](./img/vb_android_immer.png)
+
+![](./img/vb_android_immer_2.png)
+
+![](./img/vb_android_immer_3.png)
+
+
 ## ARM hardware emulation
 
 [QEMU can emulate both 32-bit and 64-bit Arm CPUs](https://qemu.readthedocs.io/en/latest/system/target-arm.html). 
