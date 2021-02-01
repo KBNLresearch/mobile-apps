@@ -4,7 +4,7 @@
 
 After installation, start Anbox Application Manager from launcher menu. On startup it looks like this:
 
-![./img/anbox-application-manager.png]
+![](./img/anbox-application-manager.png)
 
 From what I see here, Anbox does not really emulate the "look and feel" of an actual Android environment. Instead:
 
