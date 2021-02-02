@@ -2,6 +2,8 @@
 
 [Android Studio](https://developer.android.com/studio/) includes [Android Emulator](https://developer.android.com/studio/run/emulator).
 
+Version used: 30.3.5.0 (build_id 7033400)
+
 Explained [here](https://developer.android.com/studio/run/managing-avds). It's possible to set up  [Android Virtual Device](https://developer.android.com/studio/run/managing-avds) based on user-specified "hardware profile, system image, storage area, skin, and other properties". Both x86 and ARM system images are available. Uses wizard-like interface, very simple to set up.
 
 As a test I set up a device with Android 9 (same as VirtualBox) using x86 image. Some tests:
@@ -85,10 +87,21 @@ Launch: works! Some screenshots:
 
 ![](./img/androidstudio_immer_3.png)
 
+BUT if app is launched w/o network connection only blank screen is shown.
+
 
 ## Using Emulator from command line
 
 Explained [here](https://developer.android.com/studio/run/emulator-commandline).
+
+
+## x86 vs ARM system images
+
+From [Emulator 30.0.0 release notes](https://developer.android.com/studio/releases/emulator#support_for_arm_binaries_on_android_9_and_11_system_images):
+
+> If you were previously unable to use the Android Emulator because your app depended on ARM binaries, you can now use the Android 9 x86 system image or any Android 11 system image to run your app – it is no longer necessary to download a specific system image to run ARM binaries. These Android 9 and Android 11 system images support ARM by default and provide dramatically improved performance when compared to those with full ARM emulation.
+
+so x86 should be OK.
 
 ## Link with QEMU
 

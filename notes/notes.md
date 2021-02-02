@@ -59,6 +59,17 @@ Page 3:
 > a fee to be paid in order to unlock access to additional
 > content.
 
+Also, several YouTube videos here:
+
+<https://www.youtube.com/channel/UCPEDDkRVC7jegjC02-7VsUw/videos>
+
+"Hoe werkt mijn boek?"
+
+<https://youtu.be/h4syCHftyCs>
+
+Downloaden + opslaan als documentatie / contextinfo!
+
+
 # Emulation
 
 ## Android
