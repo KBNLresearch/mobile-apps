@@ -193,4 +193,4 @@ Run the app - works, but on startup shows as:
 
 ![](./img/qemu_android_immer.png)
 
-Possib;e to click to user profile but display garbled. 
+Possible to click to user profile but display garbled. UPDATE: works fine on new QEMU machine?!
