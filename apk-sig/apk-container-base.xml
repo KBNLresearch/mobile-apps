@@ -5,9 +5,26 @@
 
         <ContainerSignature Id="1001" ContainerType="ZIP">
             <Description>Android Package Archive</Description>
+            <!--
+            As there is no publicly available spec of the APK format, this signature is
+            mostly based on https://en.wikipedia.org/wiki/Android_application_package,
+            using the names of file resources only (no binary signatures, as their
+            formats are undocumented). It would be useful if we could include
+            directory names as well, but this doesn't appear to be supported (based on
+            tests with Siegfried)   
+            -->
             <Files>
                 <File>
                     <Path>AndroidManifest.xml</Path>
+                </File>
+                <!--
+                Not completely sure if classes.dex and resources.arsc are present in every APK file
+                -->
+                <File>
+                    <Path>classes.dex</Path>
+                </File>
+                <File>
+                    <Path>resources.arsc</Path>
                 </File>
             </Files>
         </ContainerSignature>
