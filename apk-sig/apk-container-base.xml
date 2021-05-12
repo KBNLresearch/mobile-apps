@@ -3,46 +3,21 @@
 <ContainerSignatureMapping schemaVersion="1.0" signatureVersion="1"> 
     <ContainerSignatures>
 
-        <ContainerSignature Id="1000" ContainerType="OLE2">
-            <Description>placeholder.format</Description>
-            <!--<Files>
+        <ContainerSignature Id="1001" ContainerType="ZIP">
+            <Description>Android Package Archive</Description>
+            <Files>
                 <File>
-                    <Path>Catalog</Path>
-                    <BinarySignatures>
-                        <InternalSignatureCollection>                    
-	                        <InternalSignature ID="300">
-	                            <ByteSequence Reference="BOFoffset">
-	                                <SubSequence Position="1" SubSeqMinOffset="0" SubSeqMaxOffset="0">
-	                                    <Sequence>10 00 07 00 [00:FF] 00	00 00 60 00 00 00 60 00 00 00 [00:FF] 00 00 00 01 00 00 00</Sequence>
-	                                </SubSequence>
-	                            </ByteSequence>
-	                        </InternalSignature>
-	                    </InternalSignatureCollection>
-                    </BinarySignatures>
+                    <Path>AndroidManifest.xml</Path>
                 </File>
-					 <File>
-                    <Path>1</Path>
-                    <BinarySignatures>
-                        <InternalSignatureCollection>                    
-	                        <InternalSignature ID="300">
-	                            <ByteSequence Reference="BOFoffset">
-	                                <SubSequence Position="1" SubSeqMinOffset="0" SubSeqMaxOffset="0">
-	                                    <Sequence>0C 00 00 00 01 00 00 00</Sequence>
-	                                </SubSequence>
-	                            </ByteSequence>
-	                        </InternalSignature>
-	                    </InternalSignatureCollection>
-                    </BinarySignatures>
-                </File>
-            </Files>-->
+            </Files>
         </ContainerSignature>
 
     </ContainerSignatures>
   
     <FileFormatMappings>
     
-    	<!--  Thumbs.db (OLE2)-->
-      <FileFormatMapping signatureId="1000" Puid="dev/1"/>
+    	<!--  Android Package Archive Container File (ZIP)-->
+      <FileFormatMapping signatureId="1001" Puid="jvdkdev/1"/>
 
     </FileFormatMappings>
   
