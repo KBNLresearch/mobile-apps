@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<FFSignatureFile xmlns="http://www.nationalarchives.gov.uk/pronom/SignatureFile" Version="20210512" DateCreated="2015-01-06T07:33:54+01:00">
+<FFSignatureFile xmlns="http://www.nationalarchives.gov.uk/pronom/SignatureFile" Version="20210512" DateCreated="2021-05-12T07:33:54+01:00">
   <InternalSignatureCollection>
   
           <InternalSignature ID="170" Specificity="Specific">
@@ -96,9 +96,9 @@
 
 <FileFormatCollection>
 
-  <!--<FileFormat ID="1" Name="placeholder.format" PUID="dev/1" Version="1.0" MIMEType="placeholder/mimetype">
-    <Extension>ext</Extension>
-  </FileFormat>-->
+  <FileFormat ID="1" Name="Android Package Archive" PUID="jvdkdev/1" Version="1.0" MIMEType="application/vnd.android.package-archive">
+    <Extension>apk</Extension>
+  </FileFormat>
 
    <FileFormat ID="767" Name="OLE2 Compound Document Format" PUID="fmt/111">
       <InternalSignatureID>170</InternalSignatureID>
